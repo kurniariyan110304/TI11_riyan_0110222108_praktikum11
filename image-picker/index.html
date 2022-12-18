@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container{
+            display: flex;
+            width: 500px;
+            height: 300px;
+            margin: 50px 350px;
+        }
+
+        .box{
+            display: flex;
+            justify-content: center;
+            width: 500px;
+            height: 300px;
+        }
+    </style>
+
+    <script>
+        function image_picker(){
+            let pilihan = document.getElementById("option");
+            const list_image = ["arsenal.png", "barcelona.png", "chelsea.png", "juventus.png", "mc.png", "MU.png", "realmadrid.png"]
+
+            if(pilihan.value == "arsenal"){
+                let select = list_image[0];
+                document.getElementById("gambar").src = `image/${select}`
+                alert("Ini logo Arsenal.png")
+            }
+
+            if(pilihan.value == "barcelona"){
+                let select = list_image[1];
+                document.getElementById("gambar").src = `image/${select}`
+                alert("Ini logo Barcelona.png")
+            }
+
+            if(pilihan.value == "chelsea"){
+                let select = list_image[2];
+                document.getElementById("gambar").src = `image/${select}`
+                alert("Ini logo Chelsea.png")
+            }
+
+            if(pilihan.value == "juventus"){
+                let select = list_image[3];
+                document.getElementById("gambar").src = `image/${select}`
+                alert("Ini logo Juventus.png")
+            }
+
+            if(pilihan.value == "mc"){
+                let select = list_image[4];
+                document.getElementById("gambar").src = `image/${select}`
+                alert("Ini logo Manchester City.png")
+            }
+
+            if(pilihan.value == "MU"){
+                let select = list_image[5];
+                document.getElementById("gambar").src = `image/${select}`
+                alert("Ini logo Manchester United.png")
+            }
+
+            if(pilihan.value == "realmadrid"){
+                let select = list_image[6];
+                document.getElementById("gambar").src = `image/${select}`
+                alert("Ini logo Real Madrid.png")
+            }
+        }
+    </script>
+</head>
+<body>
+    <select name="" id="option" onchange="image_picker()">
+        <option value="">---Pilih Gambar---</option>
+        <option value="arsenal">Arsenal</option>
+        <option value="barcelona">Barcelona</option>
+        <option value="chelsea">Chelsea</option>
+        <option value="juventus">Juventus</option>
+        <option value="mc">Manchester City</option>
+        <option value="MU">Manchester United</option>
+        <option value="realmadrid">Real Madrid</option>
+    </select>
+
+    <div class="container">
+        <div class="box">
+            <img id="gambar" src="">
+        </div>
+    </div>
+</body>
+</html>
